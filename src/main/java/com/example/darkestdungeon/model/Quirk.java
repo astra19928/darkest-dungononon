@@ -27,6 +27,6 @@ public class Quirk {
     @Column(length = 100)
     private String efeito;
 
-    @ManyToMany(mappedBy="quirk_heroi")
+    @ManyToMany(mappedBy="quirks")
     private Set<Heroi> herois;
 }

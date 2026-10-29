@@ -27,7 +27,7 @@ public class Heroi {
     @Column(length = 15)
     private String classe;
 
-    @OneToOne(mappedBy = "arma")
+    @OneToOne(mappedBy = "heroi")
     private Arma arma;
 
     @ManyToMany

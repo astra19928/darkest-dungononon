@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+}
+
+body {
+    min-height: 100dvh;
+}
+
+.site-background {
+    z-index: -1;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.list-container {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.list header {
+    z-index: 1;
+    height: 80px;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transform: translateY(-110%);
+    background-color: red;
+}
+
+button {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    color: white;
+}
+
+#heroi-list-check:checked + #heroi-list .list {
+    transform: translateY(0);
+}
