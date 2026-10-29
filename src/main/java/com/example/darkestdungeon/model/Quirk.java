@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.Set;
+
 @Entity
 @Table(name = "quirk")
 
@@ -24,4 +26,7 @@ public class Quirk {
 
     @Column(length = 100)
     private String efeito;
+
+    @ManyToMany(mappedBy="quirk_heroi")
+    private Set<Heroi> herois;
 }

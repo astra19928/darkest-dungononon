@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.Set;
+
 @Entity
 @Table(name="heroi")
 
@@ -27,4 +29,12 @@ public class Heroi {
 
     @OneToOne(mappedBy = "arma")
     private Arma arma;
+
+    @ManyToMany
+    @JoinTable(
+            name="quirk_heroi",
+            joinColumns = @JoinColumn(name="id_heroi"),
+            inverseJoinColumns = @JoinColumn(name="id_quirk")
+    )
+    private Set<Quirk> quirks;
 }
