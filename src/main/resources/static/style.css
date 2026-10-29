@@ -34,7 +34,8 @@ body {
     background-color: red;
 }
 
-button {
+label {
+    display: block;
     width: 100px;
     height: 100px;
     background-color: blue;
