@@ -1,5 +1,8 @@
 package com.example.darkestdungeon.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIncludeProperties;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -28,5 +31,6 @@ public class Quirk {
     private String efeito;
 
     @ManyToMany(mappedBy="quirks")
+    @JsonIncludeProperties({"id", "nome"})
     private Set<Heroi> herois;
 }

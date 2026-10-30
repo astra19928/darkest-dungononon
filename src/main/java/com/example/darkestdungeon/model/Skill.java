@@ -1,5 +1,6 @@
 package com.example.darkestdungeon.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -27,5 +28,6 @@ public class Skill {
 
     @ManyToOne
     @JoinColumn(name="id_heroi")
+    @JsonBackReference
     private Heroi heroi;
 }
