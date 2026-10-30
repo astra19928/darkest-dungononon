@@ -49,7 +49,6 @@ main {
     height: 60dvh;
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
     gap: 50px;
     padding-top: 200px;
 }
@@ -70,7 +69,6 @@ main {
     flex-direction: column;
     gap: 10px;
     transform: translateY(-110%);
-    background-color: var(--color-grey);
 }
 
 label {
@@ -79,6 +77,7 @@ label {
     display: flex;
     justify-content: center;
     align-items: center;
+
     background-color: var(--color-red);
     color: var(--color-orange);
     font-family: var(--font-fancy);
@@ -89,7 +88,7 @@ label {
     transform: scale(1.3);
 }
 
-li:hover {
+#list-heroi li:hover, #list-quirk li:hover {
     transform: scale(1.1);
 }
 
@@ -97,13 +96,15 @@ li:hover {
     display: none;
 }
 
-#heroi-list-check:checked + #heroi-list .list,
-#quirk-list-check:checked + #quirk-list .list {
+#heroi-list-check:checked + #heroi-list-container .list,
+#quirk-list-check:checked + #quirk-list-container .list {
     transform: translateY(0);
 }
 
 .list-container, .info-list {
+    width: 20dvw;
     max-width: 20dvw;
+
     color: var(--color-white);
     font-family: var(--font-small);
 }
@@ -112,13 +113,21 @@ li:hover {
     margin: 5px;
 }
 
-.info-list {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    background-color: var(--color-grey);
+.info-container label {
+    width: 100%;
 }
 
-.info-list p {
-    margin: 5px 30px;
+.info-list {
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+    background-color: var(--color-grey);
+    color: var(--color-white);
+    font-family: var(--font-small);
+}
+
+.info-list h3 {
+    font-family: var(--font-fancy);
 }

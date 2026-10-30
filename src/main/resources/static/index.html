@@ -6,6 +6,7 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="style.css">
+    <script defer src="populateLists.js" type="module"></script>
 </head>
 <body>
     <main>
@@ -18,16 +19,12 @@
                 <label for="heroi-list-check">
                     <p class="clickable-list-title">Heróis</p>
                 </label>
-                <input type="checkbox" id="heroi-list-check" class="list-check" name="heroi-list-check">
-                <div id="heroi-list" class="list-container">
+                <input type="checkbox" id="heroi-list-check" class="list-check" name="heroi-list-check" checked>
+                <div id="heroi-list-container" class="list-container">
                     <header></header>
 
-                    <ul class="list">
-                        <li>Dismas</li>
-                        <li>Pithou</li>
-                        <li>Reynauld</li>
-                        <li>Paracelsus</li>
-                    </ul>
+                    <ul class="list" id="list-heroi"></ul>
+
                 </div>
             </div>
 
@@ -35,16 +32,12 @@
                 <label for="quirk-list-check">
                     <p class="clickable-list-title">Quirks</p>
                 </label>
-                <input type="checkbox" id="quirk-list-check" class="list-check" name="quirk-list-check">
-                <div id="quirk-list" class="list-container">
+                <input type="checkbox" id="quirk-list-check" class="list-check" name="quirk-list-check" checked>
+                <div id="quirk-list-container" class="list-container">
                     <header></header>
 
-                    <ul class="list">
-                        <li>Cleptomaníaco</li>
-                        <li>Medo da morte</li>
-                        <li>Obsessivo</li>
-                        <li>Claustrofóbico</li>
-                    </ul>
+                    <ul class="list" id="list-quirk"></ul>
+
                 </div>
             </div>
 
@@ -56,11 +49,8 @@
                 <div>
                     <header></header>
 
-                    <div class="info-list">
-                        <p>Cleptomaníaco</p>
-                        <p>Medo da morte</p>
-                        <p>Obsessivo</p>
-                        <p>Claustrofóbico</p>
+                    <div class="info-list" id="list-info">
+                        <p class="tip">Clique em um item para ver suas informações!</p>
                     </div>
                 </div>
             </div>
